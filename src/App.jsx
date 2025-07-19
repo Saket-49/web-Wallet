@@ -3,6 +3,7 @@ import Nav from './Components/Nav'
 import './index.css'
 import HomePage from './Components/HomePage'
 import Footer from './Components/Footer'
+import { generateKey } from './keypairs'
 function App() {
   return (
     <>

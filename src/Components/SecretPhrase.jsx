@@ -9,16 +9,18 @@ function SecretPhrase() {
     };
 
     const [click , setClick] = useState(false);
-
+    const [wallet, setWallet]= useState(null)
     const generateHandler = async(e)=>{
         const token = await generateKey()
         const { privkey58, pubkey58 } = token;
+        setWallet(token)
         setClick((prev)=> !prev);
+
     }
     if(click){
         return(
             <>
-                <Interface/>
+                <Interface wallet={wallet}/>
             </>
         )
     }
